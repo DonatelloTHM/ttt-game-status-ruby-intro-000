@@ -21,9 +21,10 @@ def won?(board)
 end
 
 def full?(board)
-  if board.all? do |element|
+  if po=board.all? do |element|
       element == "X" || element == "O"
     end
+    po
   else
       false
     end
