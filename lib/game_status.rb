@@ -14,11 +14,12 @@ def won?(board)
     position_3 = board[win_index_3]
 
     if position_1 == position_2 && position_2 == position_3 && position_taken?(board, win_index_1)
-      single_win_combo
+      return single_win_combo
     end
   end
-  false
+  return false
 end
+
 def full?(board)
   if board.all? do |element|
       element == "X" || element == "O"
